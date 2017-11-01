@@ -3,7 +3,7 @@
 //  Swift project
 //
 //  Created by Owner on 9/21/17.
-//  Copyright © 2017 Owner. All rights reserved.
+//  Copyright © 2017 Owner. All rights reserved...
 //
 
 import UIKit
@@ -14,16 +14,17 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var theLabel2: UILabel!
     
-    var tapCount = 0
+    @IBOutlet weak var Text1: UITextField!
+    
+    @IBOutlet weak var Text2: UITextField!
     
     @IBAction func buttonTapped(_ sender: Any) {
-        tapCount = tapCount + 1
-        if tapCount >= 10{
-        theLabel.text = "I'm all tapped out, man"
+     print(Text1.text!)
+        print(Text2.text!)
         }
-    }
+    
     @IBAction func button2Tapped(_ sender: Any) {
-        theLabel2.text = "Buttons, cooler than you!"
+        theLabel2.text = "The answer is \(Double(Text1.text!)! + Double(Text2.text!)!)"
     }
     override func viewDidLoad() {
         super.viewDidLoad()
